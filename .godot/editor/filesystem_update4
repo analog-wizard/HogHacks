@@ -3,3 +3,7 @@ res://sprite_2d.tscn
 res://node_2d.tscn
 res://CharacterBody2D.gd
 res://Main.tscn
+res://menu.tscn
+res://menu.gd
+res://scene_select.tscn
+res://scene_select.gd

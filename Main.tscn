@@ -165,83 +165,83 @@ node_a = NodePath("../Chest")
 node_b = NodePath("../Right Leg")
 disable_collision = false
 
-[node name="Left Forearm" type="RigidBody2D" parent="."]
-position = Vector2(-515, -36)
+[node name="Left Forearm" type="RigidBody2D" parent="Player"]
+position = Vector2(-520, -36)
 rotation = 1.56569
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Forearm"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Left Forearm"]
 position = Vector2(-1.5, 35)
 shape = SubResource("RectangleShape2D_6i2hu")
 
-[node name="ColorRect" type="ColorRect" parent="Left Forearm"]
+[node name="ColorRect" type="ColorRect" parent="Player/Left Forearm"]
 offset_left = -11.0
 offset_top = 1.0
 offset_right = 10.0
 offset_bottom = 66.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Left Elbow" type="PinJoint2D" parent="."]
-position = Vector2(-515, -37)
-node_a = NodePath("../Player/Left Arm")
+[node name="Left Elbow" type="PinJoint2D" parent="Player"]
+position = Vector2(-520, -37)
+node_a = NodePath("../Left Arm")
 node_b = NodePath("../Left Forearm")
 disable_collision = false
 
-[node name="Right Forearm" type="RigidBody2D" parent="."]
-position = Vector2(-287, -38)
+[node name="Right Forearm" type="RigidBody2D" parent="Player"]
+position = Vector2(-292, -38)
 rotation = -1.57295
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Forearm"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Right Forearm"]
 position = Vector2(-1.5, 35)
 shape = SubResource("RectangleShape2D_6i2hu")
 
-[node name="ColorRect" type="ColorRect" parent="Right Forearm"]
+[node name="ColorRect" type="ColorRect" parent="Player/Right Forearm"]
 offset_left = -11.0
 offset_top = 1.0
 offset_right = 10.0
 offset_bottom = 66.0
 
-[node name="Right Elbow" type="PinJoint2D" parent="."]
-position = Vector2(-287, -38)
-node_a = NodePath("../Player/Right Arm")
+[node name="Right Elbow" type="PinJoint2D" parent="Player"]
+position = Vector2(-292, -38)
+node_a = NodePath("../Right Arm")
 node_b = NodePath("../Right Forearm")
 disable_collision = false
 
-[node name="Right Shin" type="RigidBody2D" parent="."]
-position = Vector2(-365, 138)
+[node name="Right Shin" type="RigidBody2D" parent="Player"]
+position = Vector2(-370, 138)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Right Shin"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Right Shin"]
 position = Vector2(-1.5, 35)
 shape = SubResource("RectangleShape2D_6i2hu")
 
-[node name="ColorRect" type="ColorRect" parent="Right Shin"]
+[node name="ColorRect" type="ColorRect" parent="Player/Right Shin"]
 offset_left = -11.0
 offset_top = 1.0
 offset_right = 10.0
 offset_bottom = 66.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Right Knee" type="PinJoint2D" parent="."]
-position = Vector2(-364, 138)
-node_a = NodePath("../Player/Right Leg")
+[node name="Right Knee" type="PinJoint2D" parent="Player"]
+position = Vector2(-369, 138)
+node_a = NodePath("../Right Leg")
 node_b = NodePath("../Right Shin")
 disable_collision = false
 
-[node name="Left Shin" type="RigidBody2D" parent="."]
-position = Vector2(-437, 137)
+[node name="Left Shin" type="RigidBody2D" parent="Player"]
+position = Vector2(-442, 137)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Shin"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Left Shin"]
 position = Vector2(-1.5, 35)
 shape = SubResource("RectangleShape2D_6i2hu")
 
-[node name="ColorRect" type="ColorRect" parent="Left Shin"]
+[node name="ColorRect" type="ColorRect" parent="Player/Left Shin"]
 offset_left = -11.0
 offset_top = 1.0
 offset_right = 10.0
 offset_bottom = 66.0
 metadata/_edit_use_anchors_ = true
 
-[node name="Left Knee" type="PinJoint2D" parent="."]
-position = Vector2(-438, 137)
-node_a = NodePath("../Player/Left Leg")
+[node name="Left Knee" type="PinJoint2D" parent="Player"]
+position = Vector2(-443, 137)
+node_a = NodePath("../Left Leg")
 node_b = NodePath("../Left Shin")
 disable_collision = false

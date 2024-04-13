@@ -1,3 +1,8 @@
+Button
+RichTextLabel
+TextEdit
+MenuButton
+Node2D
 Sprite2D
 CollisionShape2D
 CharacterBody2D
