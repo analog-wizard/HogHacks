@@ -1,0 +1,163 @@
+[gd_scene load_steps=6 format=3 uid="uid://dy0gwivpqumea"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_fe5uv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eq5en"]
+size = Vector2(1152, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sxti1"]
+size = Vector2(1152, 87)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptb2m"]
+size = Vector2(85.5, 113)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i2hu"]
+size = Vector2(19, 62)
+
+[node name="Main" type="Node2D"]
+position = Vector2(401, -15)
+
+[node name="Main Code" type="Camera2D" parent="."]
+position = Vector2(-401, 13)
+
+[node name="Boundries" type="Node2D" parent="."]
+
+[node name="Foor" type="StaticBody2D" parent="Boundries"]
+position = Vector2(-407, 287)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Foor"]
+position = Vector2(3, 4)
+shape = SubResource("RectangleShape2D_eq5en")
+
+[node name="ColorRect" type="ColorRect" parent="Boundries/Foor"]
+offset_left = -576.0
+offset_top = -49.0
+offset_right = 585.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Right Wall" type="StaticBody2D" parent="Boundries"]
+position = Vector2(-930, 16)
+scale = Vector2(0.0900127, 6.71694)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Right Wall"]
+position = Vector2(3, 4)
+shape = SubResource("RectangleShape2D_sxti1")
+
+[node name="ColorRect" type="ColorRect" parent="Boundries/Right Wall"]
+offset_left = -576.0
+offset_top = -49.0
+offset_right = 585.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Left Wall" type="StaticBody2D" parent="Boundries"]
+position = Vector2(132, 18)
+scale = Vector2(0.0900127, 6.71694)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundries/Left Wall"]
+position = Vector2(3, 4)
+shape = SubResource("RectangleShape2D_sxti1")
+
+[node name="ColorRect" type="ColorRect" parent="Boundries/Left Wall"]
+offset_left = -576.0
+offset_top = -49.0
+offset_right = 585.0
+offset_bottom = 46.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" type="Node2D" parent="."]
+position = Vector2(5, 0)
+script = ExtResource("1_fe5uv")
+
+[node name="Chest" type="RigidBody2D" parent="Player"]
+position = Vector2(-405, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Chest"]
+position = Vector2(-2.25, -4.5)
+rotation = -0.00746035
+shape = SubResource("RectangleShape2D_ptb2m")
+
+[node name="ColorRect" type="ColorRect" parent="Player/Chest"]
+offset_left = -47.0
+offset_top = -62.0
+offset_right = 45.0
+offset_bottom = 55.0
+
+[node name="Left Arm" type="RigidBody2D" parent="Player"]
+position = Vector2(-453, -36)
+rotation = 1.56569
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Left Arm"]
+position = Vector2(-1.5, 35)
+shape = SubResource("RectangleShape2D_6i2hu")
+
+[node name="ColorRect" type="ColorRect" parent="Player/Left Arm"]
+offset_left = -11.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 66.0
+
+[node name="Left Leg" type="RigidBody2D" parent="Player"]
+position = Vector2(-442, 71)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Left Leg"]
+position = Vector2(-1.5, 35)
+shape = SubResource("RectangleShape2D_6i2hu")
+
+[node name="ColorRect" type="ColorRect" parent="Player/Left Leg"]
+offset_left = -11.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 66.0
+
+[node name="Right Leg" type="RigidBody2D" parent="Player"]
+position = Vector2(-363, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Right Leg"]
+position = Vector2(-1.5, 35)
+shape = SubResource("RectangleShape2D_6i2hu")
+
+[node name="ColorRect" type="ColorRect" parent="Player/Right Leg"]
+offset_left = -11.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 66.0
+
+[node name="Right Arm" type="RigidBody2D" parent="Player"]
+position = Vector2(-359, -38)
+rotation = -1.57295
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Right Arm"]
+position = Vector2(-1.5, 35)
+shape = SubResource("RectangleShape2D_6i2hu")
+
+[node name="ColorRect" type="ColorRect" parent="Player/Right Arm"]
+offset_left = -11.0
+offset_top = 1.0
+offset_right = 10.0
+offset_bottom = 66.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Player"]
+position = Vector2(-453, -37)
+node_a = NodePath("../Chest")
+node_b = NodePath("../Left Arm")
+disable_collision = false
+
+[node name="PinJoint2D2" type="PinJoint2D" parent="Player"]
+position = Vector2(-359, -38)
+node_a = NodePath("../Chest")
+node_b = NodePath("../Right Arm")
+disable_collision = false
+
+[node name="PinJoint2D3" type="PinJoint2D" parent="Player"]
+position = Vector2(-443, 71)
+node_a = NodePath("../Chest")
+node_b = NodePath("../Left Leg")
+disable_collision = false
+
+[node name="PinJoint2D4" type="PinJoint2D" parent="Player"]
+position = Vector2(-364, 72)
+node_a = NodePath("../Chest")
+node_b = NodePath("../Right Leg")
+disable_collision = false

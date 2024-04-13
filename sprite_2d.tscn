@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbbq7n0ark6t3"]
+
+[ext_resource type="Texture2D" uid="uid://d2vo2t0hvdkva" path="res://icon.svg" id="1_f4hb3"]
+
+[sub_resource type="GDScript" id="GDScript_y4y5l"]
+script/source = "extends Sprite2D
+
+var speed = 400
+var angular_speed = PI
+
+func _process(delta):
+	var direction = 0
+	if Input.is_action_pressed(\"ui_left\"):
+		direction = -1
+	if Input.is_action_pressed(\"ui_right\"):
+		direction = 1
+
+	rotation += angular_speed * direction * delta
+
+	var velocity = Vector2.ZERO
+	if Input.is_action_pressed(\"ui_up\"):
+		velocity = Vector2.UP.rotated(rotation) * speed
+
+	position += velocity * delta
+"
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(504, 332)
+texture = ExtResource("1_f4hb3")
+script = SubResource("GDScript_y4y5l")
