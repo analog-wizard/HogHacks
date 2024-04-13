@@ -81,7 +81,7 @@ script = ExtResource("1_fe5uv")
 [node name="Limbs" type="Node2D" parent="Player"]
 script = ExtResource("3_7b8dt")
 
-[node name="Chest" type="StaticBody2D" parent="Player/Limbs"]
+[node name="Chest" type="RigidBody2D" parent="Player/Limbs"]
 position = Vector2(-405, 15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Limbs/Chest"]
