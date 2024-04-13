@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dbbq7n0ark6t3"]
 
-[ext_resource type="Texture2D" uid="uid://d2vo2t0hvdkva" path="res://icon.svg" id="1_f4hb3"]
+[ext_resource type="Texture2D" uid="uid://cnb0r0epqv4xv" path="res://icon.svg" id="1_f4hb3"]
 
 [sub_resource type="GDScript" id="GDScript_y4y5l"]
 script/source = "extends Sprite2D

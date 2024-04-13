@@ -1,4 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1712972611
-icon.svg::CompressedTexture2D::5688910315716971423::1712972603::1712973141::1::::<><>::
-README.md::TextFile::-1::1712970294::0::1::::<><>::
+::res://::1712985515
+CharacterBody2D.gd::GDScript::-1::1712985515::0::1::::<>CharacterBody2D<>::
+icon.svg::CompressedTexture2D::5688910315716971423::1712972876::1712986401::1::::<><>::
+node_2d.gd::GDScript::-1::1712985515::0::1::::<>Sprite2D<>::
+node_2d.tscn::PackedScene::-1::1712985515::0::1::::<><>::
+README.md::TextFile::-1::1712972876::0::1::::<><>::
+Main.tscn::PackedScene::8895807784997487992::1712985332::0::1::::<><>::res://Player.gd
+Player.gd::GDScript::-1::1712984755::0::1::::<>Node2D<>::
+RigidBody2D2.gd::GDScript::-1::1712985515::0::1::::<>RigidBody2D<>::
+Sprite2D.gd::GDScript::-1::1712985515::0::1::::<>Sprite2D<>::
+sprite_2d.tscn::PackedScene::7232544611207424958::1712985197::0::1::::<><>::uid://d2vo2t0hvdkva::::res://icon.svg

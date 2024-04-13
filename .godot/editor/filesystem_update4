@@ -1,6 +1,5 @@
-res://AnimatedSprite2D.gd
+res://test.gd
+res://sprite_2d.tscn
 res://node_2d.tscn
-res://Sprite2D.gd
-res://node_2d.gd
-res://RigidBody2D2.gd
 res://CharacterBody2D.gd
+res://Main.tscn
