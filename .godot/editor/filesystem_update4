@@ -1,3 +1,10 @@
 res://Main.tscn
+<<<<<<< HEAD
 res://Player.gd
 res://Main.gd
+=======
+res://menu.tscn
+res://menu.gd
+res://scene_select.tscn
+res://scene_select.gd
+>>>>>>> 7d304005fa1fec7d404c02642ecf08bfa320c960

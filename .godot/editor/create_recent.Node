@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+Button
+RichTextLabel
+TextEdit
+MenuButton
+Node2D
+Sprite2D
+CollisionShape2D
+CharacterBody2D
+ColorRect
+>>>>>>> 7d304005fa1fec7d404c02642ecf08bfa320c960
 StaticBody2D
 SubViewport
 PinJoint2D

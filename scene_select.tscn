@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkt4ldbec3icc"]
+
+[ext_resource type="Script" path="res://scene_select.gd" id="1_73dot"]
+
+[node name="Scene Select" type="Node2D"]
+position = Vector2(8, -51)
+script = ExtResource("1_73dot")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 220.0
+offset_top = 179.0
+offset_right = 510.0
+offset_bottom = 262.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Bench"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = 731.0
+offset_top = 175.0
+offset_right = 1021.0
+offset_bottom = 258.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Squat"
+
+[node name="Button" type="Button" parent="."]
+offset_left = 773.0
+offset_top = 413.0
+offset_right = 826.0
+offset_bottom = 444.0
+text = "Squat"
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 277.0
+offset_top = 408.0
+offset_right = 334.0
+offset_bottom = 439.0
+text = "Bench"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
